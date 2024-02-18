@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'repositories/chat_repository.dart';
 import 'screens/chat_screen.dart';
+import 'web_socket_client.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+final webSocketClient = WebSocketClient();
+final chatRepository = ChatRepository(webSocketClient: webSocketClient);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
