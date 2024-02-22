@@ -21,6 +21,28 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     _startWebSocket();
+
+    chatRepository.subscribeToMessageUpdates((message) {
+      // Update an existing message
+      if (message['event'] == 'message.updated') {
+        final updatedMessage = Message.fromJson(message['data']);
+        setState(() {
+          messages = messages.map((message) {
+            if (message.id == updatedMessage.id) {
+              return updatedMessage;
+            }
+            return message;
+          }).toList();
+        });
+        return;
+      }
+
+      // New message
+      final newMessage = Message.fromJson(message['data']);
+      setState(() {
+        messages.add(newMessage);
+      });
+    });
     super.initState();
   }
 

@@ -23,7 +23,24 @@ Future<Response> onRequest(RequestContext context) async {
           case 'message.create':
             final chatroomId = '1';
             chatRepository.createUserMessage(chatroomId, data).then((value) {
-              print(value);
+              final responseStream =
+                  chatRepository.createModelMessage(chatroomId, data);
+
+              responseStream.listen((data) {
+                final modelMessage = data.$1;
+                final eventType = data.$2;
+
+                // From server to client
+                channel.sink.add(
+                  json.encode(
+                    {
+                      'event': eventType,
+                      'data': modelMessage.toJson(),
+                    },
+                  ),
+                );
+              });
+
               return;
             });
 
@@ -37,5 +54,5 @@ Future<Response> onRequest(RequestContext context) async {
     });
   });
 
-  return Response(body: 'Welcome to Dart Frog!');
+  return handler(context);
 }

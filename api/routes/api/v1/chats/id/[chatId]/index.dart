@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
 
-Response onRequest(RequestContext context) {
+Response onRequest(RequestContext context, String chatId) {
   if (context.request.method != HttpMethod.get) {
     return Response(
       statusCode: HttpStatus.methodNotAllowed,
