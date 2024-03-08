@@ -1,16 +1,6 @@
-# realtime_multiturn_chatbot_with_flutter_and_gemini
+# Realtime Multiturn Chatbot with Flutter & Gemini
+The project aims to create a simple AI chatbot that utilizes the Dart package `google_generative_ai` and the Gemini AI model. Using dart_frog as a backend server, the project establishes a WebSocket connection between the client and the server to build a real-time, multi-turn AI chatbot. 
 
-A new Flutter project.
+### Video tutorial: https://youtu.be/_yg1KHNv_tE
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Hero](screenshots/Real-Time, Multi-Turn AI Chatbot with Flutter, Gemini, Dart Frog and google_generative_ai.png)<br />

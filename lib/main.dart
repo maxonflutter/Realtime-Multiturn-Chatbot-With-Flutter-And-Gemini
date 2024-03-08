@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'repositories/chat_repository.dart';
 import 'screens/chat_screen.dart';
-import 'web_socket_client.dart';
+import 'services/web_socket_client.dart';
 
 void main() {
   runApp(const MyApp());

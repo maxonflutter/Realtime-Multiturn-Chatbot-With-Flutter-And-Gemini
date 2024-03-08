@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:models/models.dart';
 
-import '../web_socket_client.dart';
+import '../services/web_socket_client.dart';
 
 class ChatRepository {
   // final ApiClient apiClient;
