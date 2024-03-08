@@ -3,4 +3,4 @@ The project aims to create a simple AI chatbot that utilizes the Dart package `g
 
 ### Video tutorial: https://youtu.be/_yg1KHNv_tE
 
-![Hero](screenshots/Real-Time, Multi-Turn AI Chatbot with Flutter, Gemini, Dart Frog and google_generative_ai.png)<br />
+![Hero](screenshots/realtime-multiturn-chatbot-with-flutter-gemini.png)<br />
